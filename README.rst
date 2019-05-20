@@ -38,24 +38,3 @@ To install using ``easy_install``::
 
 
 To install from source, download the source from github (http://github.com/Charles-Kaminski/treeutils/downloads).  Decompress it and put it in the folder with your python project as another python module.
-
-Method
-======
-
-For each template, the minimizer command:  
-
-1. Replaces any ``{# NOMINIFY #} {# ENDNOMINIFY #}`` tags and content with a unique identifier and saves the content in memory so that it is excluded from the rest of the process.
-
-2. Remaining Django comments are removed.
-
-3. Django tags and django variables are replaced with unique identifiers.  The tags and variables are saved in memory.  This approach "protects" the tags and variables from the minimizers.  It also allows you to use Django tags and variables inside your javascript and CSS without ill effect by the CSS or javascript minimizer.
-
-4. HTML script tags and content are replaced with unique identifiers. The tags and content are saved in memory for additional processing.  The type attribute for the script tag is checked to see if the script content is javascript.  If no type is provided, then javascript is assumed.  Any javascript is then run through the javascript minimizers.
-
-5. An almost identical process to step 4 is implemented on the HTML style tags for css.
-
-6. The remaining text (with the identifiers) is run through the html minimizers.
-
-7. All of the content saved in memory and associated with unique identifiers are put back.
-
-8. The original template is moved to an archive folder.  The minimized template is put in the original location.
