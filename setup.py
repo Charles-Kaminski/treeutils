@@ -6,7 +6,7 @@ long_description = codecs.open('README.rst', 'r', 'utf-8').read()
 
 setuptools.setup(
       name='treeutils',
-      version='0.1.0',
+      version='0.1.1',
       description=('For developers who have to fit real world data into '
                    'tree structures like the D3 tree.'), 
       long_description=long_description,
