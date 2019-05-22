@@ -37,4 +37,4 @@ To install using ``easy_install``::
     $ easy_install treeutils
 
 
-To install from source, download the source from github (http://github.com/Charles-Kaminski/treeutils/downloads).  Decompress it and put it in the folder with your python project as another python module.
+To install from source, download the source from github (https://github.com/Charles-Kaminski/treeutils/archive/master.zip).  Decompress it and put it in the folder with your python project as another python module.
